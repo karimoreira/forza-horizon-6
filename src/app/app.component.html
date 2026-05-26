@@ -1,0 +1,145 @@
+<header class="header" [class.header--scrolled]="isScrolled">
+  <div class="container header__content">
+      <a href="/" class="header__logo">
+        <span class="logo-mark"><i class="fa-solid fa-gauge-high"></i></span>
+        FORZA <span class="text-accent">HORIZON 6</span>
+      </a>
+      <nav class="header__nav">
+          <ul class="nav__list">
+              <li><a (click)="scrollTo('teaser')" [class.active]="activeSection === 'teaser'" class="nav__link">Visão Geral</a></li>
+              <li><a (click)="scrollTo('car-showcase')" [class.active]="activeSection === 'car-showcase'" class="nav__link">Carros</a></li>
+              <li><a (click)="scrollTo('galeria')" [class.active]="activeSection === 'galeria'" class="nav__link">Ambiente</a></li>
+          </ul>
+      </nav>
+      <div class="header__actions">
+        <button class="btn btn--neon btn--small">Pré-Venda</button>
+      </div>
+  </div>
+</header>
+
+<main>
+
+  <section id="hero" class="hero">
+      <div class="hero__video-container">
+          <div class="hero__video-placeholder"></div>
+
+          <div class="hero__fx hero__fx--1"></div>
+          <div class="hero__fx hero__fx--2"></div>
+      </div>
+      <div class="hero__overlay"></div>
+      
+      <div class="container">
+        <div class="hero__content">
+          <div class="hero__badge">
+            <i class="fa-solid fa-location-dot"></i> Bem-vindo ao Japão
+          </div>
+          <h1 class="hero__title">
+            <span class="glitch-text" data-text="A NOVA ERA">A NOVA ERA</span><br>
+            DA <span class="text-gradient">VELOCIDADE</span>
+          </h1>
+          <p class="hero__subtitle">Culturas colidem, as luzes neon acendem e a adrenalina nunca para. Experimente as ruas vibrantes de Tóquio até os desfiladeiros majestosos de Hakone. O Festival Horizon chegou à Ásia.</p>
+          
+          <div class="hero__actions">
+              <button (click)="scrollTo('teaser')" class="btn btn--primary btn--glow">
+                <span>Inicie sua Jornada</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              <button (click)="scrollTo('galeria')" class="btn btn--secondary btn--glass">Ver Gameplay</button>
+          </div>
+
+          <div class="hero__stats">
+              <div class="stat-card glass-panel">
+                  <i class="fa-solid fa-display stat-icon"></i>
+                  <span class="stat-card__value text-neon text-neon--blue">8K / 120fps</span>
+                  <span class="stat-card__label">Motor Gráfico F-Tech 2.0</span>
+              </div>
+              <div class="stat-card glass-panel">
+                  <i class="fa-solid fa-cloud-bolt stat-icon"></i>
+                  <span class="stat-card__value text-neon text-neon--pink">Hiper-Clima</span>
+                  <span class="stat-card__label">Tufões e Neve Dinâmica</span>
+              </div>
+              <div class="stat-card glass-panel">
+                  <i class="fa-solid fa-car-side stat-icon"></i>
+                  <span class="stat-card__value text-neon text-neon--yellow">800+</span>
+                  <span class="stat-card__label">Veículos Modelados</span>
+              </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+  <section id="teaser" class="teaser section-padding">
+      <div class="container teaser__grid">
+          <div class="teaser__info" data-aos="fade-right">
+              <span class="section-tag">Gráficos Next-Gen</span>
+              <h2 class="section-title text-left">Realidade <span class="text-gradient">Absoluta</span></h2>
+              <p class="teaser__text">
+                  Com o poder do Ray Tracing global ativo durante toda a gameplay, a iluminação das cidades reflete nas poças, latarias e vidros com precisão milimétrica. O mundo reage a cada detalhe e à sua direção.
+              </p>
+              <ul class="feature-list">
+                <li><i class="fa-solid fa-check text-accent"></i> Física Deformável Avançada</li>
+                <li><i class="fa-solid fa-check text-accent"></i> Inteligência Artificial Neural "Drivatar 3.0"</li>
+                <li><i class="fa-solid fa-check text-accent"></i> Integração VR Nativa</li>
+              </ul>
+          </div>
+          <div class="teaser__media" data-aos="fade-left">
+              <div class="media-frame glass-panel">
+                 <div class="media-overlay"></div>
+                 <div class="media-content media-img-placeholder"></div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+
+  <section id="galeria" class="galeria section-padding">
+      <div class="container">
+          <div class="galeria__header text-center">
+            <span class="section-tag">Exploração Ilimitada</span>
+            <h2 class="section-title">O Mundo em Detalhes</h2>
+            <p>De Tóquio aos alpes nevados: o mapa mais denso e diverso já criado.</p>
+          </div>
+          <div class="galeria__grid">
+              <div class="galeria__item item--1">
+                <div class="item__desc">Ruas de Neon</div>
+              </div>
+              <div class="galeria__item item--2">
+                <div class="item__desc">Touge nas Montanhas</div>
+              </div>
+              <div class="galeria__item item--3">
+                <div class="item__desc">Cultura Automotiva Local</div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+
+  <section class="cta section-padding">
+    <div class="container cta__content glass-panel center-content">
+      <h2 class="cta__title">Prepare seu Motor</h2>
+      <p class="cta__text">Assine o Xbox Game Pass e jogue no dia do lançamento ou reserve a Edição Suprema para acesso antecipado.</p>
+      <div class="cta__actions">
+        <button class="btn btn--primary btn--glow btn--large">Reservar Agora</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__content">
+      <div class="footer__brand">
+        <a href="/" class="header__logo">FORZA <span class="text-accent">HORIZON 6</span></a>
+        <p class="footer__disclaimer">Imagens e vídeos baseados na versão de desenvolvimento rodando no Xbox Series X e PC.</p>
+      </div>
+      <div class="footer__links">
+        <a href="https://www.youtube.com/@Forza" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://twitter.com/ForzaHorizon" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.instagram.com/forzahorizon/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://discord.gg/forza" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord"></i></a>
+      </div>
+  </div>
+  <div class="footer__bottom">
+    <p>© 2026 Playground Games. Todos os direitos reservados. Design não oficial, conceito de fã.</p>
+  </div>
+</footer>
